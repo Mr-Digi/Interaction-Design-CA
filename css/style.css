@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: pink;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+}
+
+#logo {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu ul {
+    margin: 0;
+    float: right;
+}
+
+.menu ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
