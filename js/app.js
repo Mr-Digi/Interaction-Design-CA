@@ -5,6 +5,10 @@ const cart = [
 ];
 
 function onload() {
+    let list = document.getElementById("jacketList");
+    list.remove();
+    list = document.createElement("div");
+    list.setAttribute("id", "jacketList");
     for (let i = 0; i < featured.length; i++) {
         let container = document.createElement("div");
         container.setAttribute("class", "productContainer");
@@ -30,8 +34,8 @@ function onload() {
         addBtn.setAttribute("value", `${i}`);
         addBtn.innerHTML = "Add to cart";
         container.appendChild(addBtn);
-
-        contentElement.appendChild(container);
+        list.appendChild(container);
+        contentElement.appendChild(list);
     }
 }
 
@@ -116,4 +120,40 @@ function opencart() {
 
 function closecart() {
     document.getElementById("cartOverlay").style.display = "none";
+}
+
+function getJackets(value) {
+    let list = document.getElementById("jacketList");
+    list.remove();
+    list = document.createElement("div");
+    list.setAttribute("id", "jacketList");
+    for (let i = 0; i < featured.length; i++) {
+        if (featured[i].sex != value) continue;
+        let container = document.createElement("div");
+        container.setAttribute("class", "productContainer");
+
+        let image = document.createElement("img");
+        image.setAttribute("id", "productImage");
+        image.setAttribute("src", `images/${featured[i].imageName}.png`);
+        container.appendChild(image);
+
+        let name = document.createElement("p");
+        name.setAttribute("id", "productName");
+        name.innerHTML = featured[i].name;
+        container.appendChild(name);
+
+        let description = document.createElement("p");
+        description.setAttribute("id", "productDesc");
+        description.innerHTML = featured[i].description;
+        container.appendChild(description);
+
+        let addBtn = document.createElement("button");
+        addBtn.setAttribute("id", "productPrice");
+        addBtn.setAttribute("onclick", "addToCart(this.value)");
+        addBtn.setAttribute("value", `${i}`);
+        addBtn.innerHTML = "Add to cart";
+        container.appendChild(addBtn);
+        list.appendChild(container);
+        contentElement.appendChild(list);
+    }
 }

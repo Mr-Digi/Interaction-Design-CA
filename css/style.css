@@ -90,6 +90,10 @@ body {
 .content {
     width: 75%;
     margin: 0 auto;
+    
+}
+
+#jacketList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -99,6 +103,27 @@ body {
     text-align: center;
 }
 
+#sexBtn {
+    border-radius: 25px;
+    border: 0;
+    background-color: #0a3641;
+    color: #1c97b6;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+}
+
+#sexBtn:hover {
+    background-color: #105e72;
+}
+
+.aboutText {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*
 Cart
 */
@@ -177,4 +202,62 @@ Product containter
 
 #productPrice:hover {
     background-color: #105e72;
+}
+
+/*Contact*/
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+#submit {
+    background-color: #0a3641;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit a {
+    text-decoration: none;
+    color: #1c97b6;
+}
+
+
+#submit:hover {
+    background-color: #105e72;
+}
+
+.contentContact {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formContainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formContainer form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#formSpan2 {
+    grid-column: span 2;
+}
+
+#formSpan1 {
+    grid-column: span 1;
 }
