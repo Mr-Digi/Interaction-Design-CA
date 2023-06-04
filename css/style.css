@@ -228,6 +228,10 @@ input[type=email] {
     resize: vertical;
 }
 
+#submit a {
+    text-decoration: none;
+    color: #1c97b6;
+}
 
 #submit {
     background-color: #0a3641;
