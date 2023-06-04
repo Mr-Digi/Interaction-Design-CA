@@ -31,7 +31,7 @@
                     <a href="shop.html">SHOP</a>
                 </li>
                 <li>
-                    <a href="contact.html"><b>CONTACT</b></a>
+                    <a href="contact.html">CONTACT</a>
                 </li>
                 <li>
                     <button id="cart" onclick="opencart()"><img src="images/cart.png"></button>
@@ -67,32 +67,8 @@
                
             </div>
         </div>
-        <div class="contentContact">
-            <h1 id="contentTitle">Contact us</h1>
-            <form onsubmit="return submitForm(event)">
-
-                <label id="nameLabel" for="fname">First Name*</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            
-                <label id="lastnameLabel" for="lname">Last Name*</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                <label id="emailLabel" for="email">Email*</label>
-                <input type="email" id="email" name="email" placeholder="Your email..">
-            
-                <label for="reason">Reason</label>
-                <select id="reason" name="reason">
-                    <option value="order">Order</option>
-                    <option value="question">Question</option>
-                    <option value="job">Job</option>
-                </select>
-            
-                <label id="messageLabel" for="subject">Message*</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            
-                <input id="submit" type="submit" value="Submit">
-            
-              </form>
+        <div class="content">
+            <h1 id="contentTitle">Your form was successfully submitted</h1>
         </div>
         <script src="js/contact.js"></script>
     </body>
