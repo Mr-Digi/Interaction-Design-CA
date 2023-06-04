@@ -38,6 +38,29 @@
                 </li>
             </ul>
         </div>
+        <button id="menuBtn" onclick="openMobile()">Menu</button>
+        <div class="mobileMenu">
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="shop.html">SHOP</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+                <li>
+                    <button id="cart" onclick="opencart()"><img src="images/cart.png"></button>
+                </li>
+                <li onclick="closeMenumobile()">
+                    Close
+                </li>
+            </ul>
+        </div>
         <div id="cartOverlay" onclick="closecart()">
             <div class="cartContent">
                 
@@ -46,12 +69,12 @@
         </div>
         <div class="contentContact">
             <h1 id="contentTitle">Contact us</h1>
-            <form>
+            <form onsubmit="return submitForm(event)">
 
-                <label for="fname">First Name</label>
+                <label id="nameLabel" for="fname">First Name*</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
             
-                <label for="lname">Last Name</label>
+                <label id="lastnameLabel" for="lname">Last Name*</label>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
             
                 <label for="reason">Reason</label>
@@ -61,12 +84,13 @@
                     <option value="job">Job</option>
                 </select>
             
-                <label for="subject">Subject</label>
+                <label id="messageLabel" for="subject">Message*</label>
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
             
                 <input type="submit" value="Submit">
             
               </form>
         </div>
+        <script src="js/contact.js"></script>
     </body>
 </html>

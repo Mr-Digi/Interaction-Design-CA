@@ -122,6 +122,14 @@ function closecart() {
     document.getElementById("cartOverlay").style.display = "none";
 }
 
+function openMobile() {
+    menu = document.getElementsByClassName("mobileMenu")[0].style.display = "block";
+}
+
+function closeMenumobile() {
+    menu = document.getElementsByClassName("mobileMenu")[0].style.display = "none";
+}
+
 function getJackets(value) {
     let list = document.getElementById("jacketList");
     list.remove();
