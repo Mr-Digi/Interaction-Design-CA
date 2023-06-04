@@ -1,6 +1,9 @@
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu {
@@ -278,6 +281,19 @@ input[type=email] {
 
 #menuBtn {
     display: none;
+}
+
+footer {
+    background-color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: auto;
+    bottom: 0;
 }
 
 @media only screen and (max-width: 600px) {
