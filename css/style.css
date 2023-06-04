@@ -180,10 +180,11 @@ Product containter
     padding: 25px;
     background-color: rgb(215, 215, 215);
     margin: 50px;
+    text-align: center;
 }
 
 #productImage {
-    width: 200px;
+    width: 100%;
     margin: auto;
 }
 
