@@ -25,6 +25,7 @@ function onload() {
             console.log(data[k].name);
             console.log(data[k].price);
             console.log(data[k].images[0].src);
+            console.log(data[k].description);
             let container = document.createElement("div");
             container.setAttribute("class", "productContainer");
 
@@ -40,7 +41,7 @@ function onload() {
 
             let description = document.createElement("p");
             description.setAttribute("id", "productDesc");
-            description.innerHTML = "coming soon";
+            description.innerHTML = data[k].description;
             container.appendChild(description);
 
             let addBtn = document.createElement("button");
