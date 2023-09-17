@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rainydays</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="Description" content="Buy good quality rainjackets cheap" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Hotjar Tracking Code for https://mrdigi.netlify.app -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:3519429,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <a href="index.html"><img id="logo" src="images/logo.png"></a>
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="shop.html"><b>SHOP</b></a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+                <li>
+                    <button id="cart" onclick="opencart()"><img src="images/cart.png"></button>
+                </li>
+            </ul>
+        </div>
+        <button id="menuBtn" onclick="openMobile()">Menu</button>
+        <div class="mobileMenu">
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="shop.html">SHOP</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+                <li>
+                    <button id="cart" onclick="opencart()"><img src="images/cart.png"></button>
+                </li>
+                <li onclick="closeMenumobile()">
+                    Close
+                </li>
+            </ul>
+        </div>
+        <div id="cartOverlay" onclick="closecart()">
+            <div class="cartContent">
+                
+               
+            </div>
+        </div>
+        <div class="content">
+            <h1 id="contentTitle">All our jackets</h1>
+            <div id="jacketList">
+
+            </div>
+        </div>
+        <script src="js/jackets.js"></script>
+    </body>
+    <footer>
+        Copyright Rainydays 2023
+    </footer>
+</html>

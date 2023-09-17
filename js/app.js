@@ -26,10 +26,14 @@ function onload() {
             let container = document.createElement("div");
             container.setAttribute("class", "productContainer");
 
+            let productURL = document.createElement("a");
+            productURL.setAttribute("href", "mrdigi.netlify.app/product?"+`name=${data[k].name}&`+`price=${data[k].price}&`+`image=${data[k].images[0].src}&`+`description=${data[k].description}`);
+
             let image = document.createElement("img");
             image.setAttribute("id", "productImage");
             image.setAttribute("src", data[k].images[0].src);
-            container.appendChild(image);
+            productURL.appendChild(image);
+            container.appendChild(productURL);
 
             let name = document.createElement("p");
             name.setAttribute("id", "productName");
