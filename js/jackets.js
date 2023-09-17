@@ -4,6 +4,7 @@ const productPrice = urlParams.get('price');
 const productImage = urlParams.get('image');
 const productDescription = urlParams.get('description');
 
+const contentElement = document.getElementsByClassName("content")[0];
 let container = document.createElement("div");
 container.setAttribute("class", "productContainer");
 
