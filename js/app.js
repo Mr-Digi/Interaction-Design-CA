@@ -201,5 +201,8 @@ function getJackets(value) {
             list.appendChild(container);
             contentElement.appendChild(list);
         }
-    }
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
 }
