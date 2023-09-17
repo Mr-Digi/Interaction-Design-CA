@@ -195,7 +195,7 @@ function getJackets(value) {
             let addBtn = document.createElement("button");
             addBtn.setAttribute("id", "productPrice");
             addBtn.setAttribute("onclick", "addToCart(this.value)");
-            addBtn.setAttribute("value", `${data[k].name}#`+`${data[k].price}#`+`${data[k].description}#`+`${data[k].images[0].src}`);
+            addBtn.setAttribute("value", `${data[i].name}#`+`${data[i].price}#`+`${data[i].description}#`+`${data[i].images[0].src}`);
             addBtn.innerHTML = "Add to cart";
             container.appendChild(addBtn);
             list.appendChild(container);
