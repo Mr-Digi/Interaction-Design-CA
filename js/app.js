@@ -22,10 +22,7 @@ function onload() {
     .then(resp => resp.json())
     .then(function(data) {
         for (let k = 0; k < data.length; k++) {
-            console.log(data[k].name);
-            console.log(data[k].price);
-            console.log(data[k].images[0].src);
-            console.log(data[k].description);
+            console.log(data[k]);
             let container = document.createElement("div");
             container.setAttribute("class", "productContainer");
 
