@@ -28,7 +28,7 @@ description.innerHTML = productDescription;
 container.appendChild(description);
 
 let price = document.createElement("p");
-price.setAttribute("id", "productPrice");
+price.setAttribute("id", "productDesc");
 price.innerHTML = productPrice;
 container.appendChild(price);
 
