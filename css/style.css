@@ -193,6 +193,12 @@ Product containter
     margin: auto;
 }
 
+#productImagePage {
+    width: 40%;
+    margin: auto;
+    float:left;
+}
+
 #productName {
     font-size: 30px;
     font-weight: bold;

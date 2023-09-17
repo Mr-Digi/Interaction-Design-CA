@@ -4,7 +4,6 @@ const productPrice = urlParams.get('price');
 const productImage = urlParams.get('image');
 const productDescription = urlParams.get('description');
 
-const contentElement = document.getElementsByClassName("content")[0];
 let container = document.createElement("div");
 container.setAttribute("class", "productContainer");
 
@@ -14,7 +13,7 @@ list = document.createElement("div");
 list.setAttribute("id", "productList");
 
 let image = document.createElement("img");
-image.setAttribute("id", "productImage");
+image.setAttribute("id", "productImagePage");
 image.setAttribute("src", productImage);
 container.appendChild(image);
 
@@ -27,6 +26,11 @@ let description = document.createElement("p");
 description.setAttribute("id", "productDesc");
 description.innerHTML = productDescription;
 container.appendChild(description);
+
+let price = document.createElement("p");
+price.setAttribute("id", "productPrice");
+price.innerHTML = productPrice;
+container.appendChild(price);
 
 let addBtn = document.createElement("button");
 addBtn.setAttribute("id", "productPrice");
