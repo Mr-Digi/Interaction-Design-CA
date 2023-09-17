@@ -6,58 +6,60 @@ const cart = [
 
 function onload() {
     let list = document.getElementById("jacketList");
-    list.remove();
-    list = document.createElement("div");
-    list.setAttribute("id", "jacketList");
+    if (list) {
+        list.remove();
+        list = document.createElement("div");
+        list.setAttribute("id", "jacketList");
 
-    var key = "ck_43a862fd9e91493600da06f09a81e8bc05414252";
-    var secret = "cs_8181a9be3fd8795bd757e3ec790723d7aada9951";
-    const url = "https://netlify.mrdigi.tv/wp-json/wc/v3/products?consumer_key="+ key + "&consumer_secret=" + secret;
-    fetch(url, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(resp => resp.json())
-    .then(function(data) {
-        for (let k = 0; k < data.length; k++) {
-            console.log(data[k]);
-            let container = document.createElement("div");
-            container.setAttribute("class", "productContainer");
+        var key = "ck_43a862fd9e91493600da06f09a81e8bc05414252";
+        var secret = "cs_8181a9be3fd8795bd757e3ec790723d7aada9951";
+        const url = "https://netlify.mrdigi.tv/wp-json/wc/v3/products?consumer_key="+ key + "&consumer_secret=" + secret;
+        fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(resp => resp.json())
+        .then(function(data) {
+            for (let k = 0; k < data.length; k++) {
+                console.log(data[k]);
+                let container = document.createElement("div");
+                container.setAttribute("class", "productContainer");
 
-            let productURL = document.createElement("a");
-            productURL.setAttribute("href", "product?"+`name=${data[k].name}&`+`price=${data[k].price}&`+`image=${data[k].images[0].src}&`+`description=${data[k].description}`);
+                let productURL = document.createElement("a");
+                productURL.setAttribute("href", "product?"+`name=${data[k].name}&`+`price=${data[k].price}&`+`image=${data[k].images[0].src}&`+`description=${data[k].description}`);
 
-            let image = document.createElement("img");
-            image.setAttribute("id", "productImage");
-            image.setAttribute("src", data[k].images[0].src);
-            productURL.appendChild(image);
-            container.appendChild(productURL);
+                let image = document.createElement("img");
+                image.setAttribute("id", "productImage");
+                image.setAttribute("src", data[k].images[0].src);
+                productURL.appendChild(image);
+                container.appendChild(productURL);
 
-            let name = document.createElement("p");
-            name.setAttribute("id", "productName");
-            name.innerHTML = data[k].name;
-            container.appendChild(name);
+                let name = document.createElement("p");
+                name.setAttribute("id", "productName");
+                name.innerHTML = data[k].name;
+                container.appendChild(name);
 
-            let description = document.createElement("p");
-            description.setAttribute("id", "productDesc");
-            description.innerHTML = data[k].description;
-            container.appendChild(description);
+                let description = document.createElement("p");
+                description.setAttribute("id", "productDesc");
+                description.innerHTML = data[k].description;
+                container.appendChild(description);
 
-            let addBtn = document.createElement("button");
-            addBtn.setAttribute("id", "productPrice");
-            addBtn.setAttribute("onclick", "addToCart(this.value)");
-            addBtn.setAttribute("value", `${data[k].name}#`+`${data[k].price}#`+`${data[k].description}#`+`${data[k].images[0].src}`);
-            addBtn.innerHTML = "Add to cart";
-            container.appendChild(addBtn);
-            list.appendChild(container);
-            contentElement.appendChild(list);
-        }
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
+                let addBtn = document.createElement("button");
+                addBtn.setAttribute("id", "productPrice");
+                addBtn.setAttribute("onclick", "addToCart(this.value)");
+                addBtn.setAttribute("value", `${data[k].name}#`+`${data[k].price}#`+`${data[k].description}#`+`${data[k].images[0].src}`);
+                addBtn.innerHTML = "Add to cart";
+                container.appendChild(addBtn);
+                list.appendChild(container);
+                contentElement.appendChild(list);
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    }
 }
 
 onload();
@@ -181,10 +183,14 @@ function getJackets(value) {
             let container = document.createElement("div");
             container.setAttribute("class", "productContainer");
 
+            let productURL = document.createElement("a");
+            productURL.setAttribute("href", "product?"+`name=${data[i].name}&`+`price=${data[i].price}&`+`image=${data[i].images[0].src}&`+`description=${data[i].description}`);
+
             let image = document.createElement("img");
             image.setAttribute("id", "productImage");
             image.setAttribute("src", `${data[i].images[0].src}`);
-            container.appendChild(image);
+            productURL.appendChild(image);
+            container.appendChild(productURL);
 
             let name = document.createElement("p");
             name.setAttribute("id", "productName");

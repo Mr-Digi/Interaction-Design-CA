@@ -29,7 +29,7 @@ container.appendChild(description);
 
 let price = document.createElement("p");
 price.setAttribute("id", "productDesc");
-price.innerHTML = productPrice;
+price.innerHTML = "Price: $"+productPrice;
 container.appendChild(price);
 
 let addBtn = document.createElement("button");
