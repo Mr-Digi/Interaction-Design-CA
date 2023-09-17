@@ -87,7 +87,6 @@ function addToCart(value) {
 function showCart() {
     console.log(cart);
 }
-global.showCart = showCart;
 
 function opencart() {
     if (cart.length <= 0) {
