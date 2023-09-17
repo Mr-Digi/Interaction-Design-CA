@@ -30,7 +30,7 @@ function onload() {
 
             let image = document.createElement("img");
             image.setAttribute("id", "productImage");
-            image.setAttribute("src", `data[k].images[0].src`);
+            image.setAttribute("src", data[k].images[0].src);
             container.appendChild(image);
 
             let name = document.createElement("p");
