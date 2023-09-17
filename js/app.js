@@ -46,7 +46,7 @@ function onload() {
             let addBtn = document.createElement("button");
             addBtn.setAttribute("id", "productPrice");
             addBtn.setAttribute("onclick", "addToCart(this.value)");
-            addBtn.setAttribute("value", `${i}`);
+            addBtn.setAttribute("value", `test`);
             addBtn.innerHTML = "Add to cart";
             container.appendChild(addBtn);
             list.appendChild(container);
