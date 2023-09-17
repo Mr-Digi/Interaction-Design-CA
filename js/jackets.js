@@ -8,10 +8,10 @@ const contentElement = document.getElementsByClassName("content")[0];
 let container = document.createElement("div");
 container.setAttribute("class", "productContainer");
 
-let list = document.getElementById("jacketList");
+let list = document.getElementById("productList");
 list.remove();
 list = document.createElement("div");
-list.setAttribute("id", "jacketList");
+list.setAttribute("id", "productList");
 
 let image = document.createElement("img");
 image.setAttribute("id", "productImage");

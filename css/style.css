@@ -101,6 +101,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
+#productList {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
 #contentTitle {
     grid-column: span 3;
     text-align: center;
