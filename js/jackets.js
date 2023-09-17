@@ -7,6 +7,11 @@ const productDescription = urlParams.get('description');
 let container = document.createElement("div");
 container.setAttribute("class", "productContainer");
 
+let list = document.getElementById("jacketList");
+list.remove();
+list = document.createElement("div");
+list.setAttribute("id", "jacketList");
+
 let image = document.createElement("img");
 image.setAttribute("id", "productImage");
 image.setAttribute("src", productImage);
