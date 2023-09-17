@@ -15,7 +15,7 @@
                 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            fetch('https://mrdigi.tv/wp-json/wp/v2/posts')
+            fetch('https://netlify.mrdigi.tv/wp-json/wc/v3?_jsonp=callback')
             .then(response => response.json())
             .then(data => console.log(data));
         </script>
