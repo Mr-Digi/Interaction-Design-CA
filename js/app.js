@@ -9,6 +9,28 @@ function onload() {
     list.remove();
     list = document.createElement("div");
     list.setAttribute("id", "jacketList");
+
+    var key = "ck_43a862fd9e91493600da06f09a81e8bc05414252";
+    var secret = "cs_8181a9be3fd8795bd757e3ec790723d7aada9951";
+    const url = "https://netlify.mrdigi.tv/wp-json/wc/v3/products?consumer_key="+ key + "&consumer_secret=" + secret;
+    fetch(url, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(resp => resp.json())
+    .then(function(data) {
+        for (let k = 0; k < data.length; k++) {
+            console.log(data[k].name);
+            console.log(data[k].price);
+            console.log(data[k].images[0].src);
+        }
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
     for (let i = 0; i < featured.length; i++) {
         let container = document.createElement("div");
         container.setAttribute("class", "productContainer");
