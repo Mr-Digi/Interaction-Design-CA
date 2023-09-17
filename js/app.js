@@ -105,7 +105,7 @@ function opencart() {
 
         let productImage = document.createElement("img");
         productImage.setAttribute("id", "cartImage");
-        productImage.setAttribute("src", `images/${cart[i].imageName}.png`);
+        productImage.setAttribute("src", `${cart[i].imageURL}`);
         container.appendChild(productImage);
 
         let holderDiv = document.createElement("div");
