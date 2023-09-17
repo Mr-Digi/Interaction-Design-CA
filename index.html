@@ -15,9 +15,23 @@
                 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            fetch('https://netlify.mrdigi.tv/wp-json/wc/v3/products')
-            .then(response => response.json())
-            .then(data => console.log(data));
+            
+            var key = "ck_43a862fd9e91493600da06f09a81e8bc05414252";
+            var secret = "cs_8181a9be3fd8795bd757e3ec790723d7aada9951";
+            const url = "https://netlify.mrdigi.tv/wp-json/wc/v3/products?consumer_key="+ key + "&consumer_secret=" + secret;
+            fetch(url, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(resp => resp.json())
+            .then(function(data) {
+                console.log(data);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
         </script>
     </head>
     <body>
