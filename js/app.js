@@ -47,7 +47,7 @@ function onload() {
             let addBtn = document.createElement("button");
             addBtn.setAttribute("id", "productPrice");
             addBtn.setAttribute("onclick", "addToCart(this.value)");
-            addBtn.setAttribute("value", `test`);
+            addBtn.setAttribute("value", `${data[k].name}:`+`${data[k].price}:`+`${data[k].description}:`+`${data[k].images[0].src}`);
             addBtn.innerHTML = "Add to cart";
             container.appendChild(addBtn);
             list.appendChild(container);
@@ -64,7 +64,14 @@ onload();
 function addToCart(value) {
     const cartElement = document.getElementById("cart");
     let cartAmount = document.getElementById("cartAmount");
+    value = value.split(":");
     let amountInCart = 0;
+    let thisItem = {
+        name: value[0],
+        imageURL: value[3],
+        description: value[2],
+        price: value[1]    
+    };
     if (cartAmount) {
         amountInCart = Number(cartAmount.innerHTML);
         cartAmount.innerHTML = amountInCart+1;
@@ -75,7 +82,10 @@ function addToCart(value) {
         cartElement.appendChild(cartAmount);
     }
     
-    cart.push(featured[value]);
+    cart.push(thisItem);
+}
+function showCart() {
+    console.log(cart);
 }
 
 function opencart() {
