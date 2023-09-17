@@ -173,8 +173,7 @@ function getJackets(value) {
     .then(resp => resp.json())
     .then(function(data) {
         for (let i = 0; i < data.length; i++) {
-            console.log(data[i].tags[0] + " | " + value);
-            if (data[i].tags[0] != value) continue;
+            if (data[i].tags[0].name != value) continue;
             let container = document.createElement("div");
             container.setAttribute("class", "productContainer");
 
