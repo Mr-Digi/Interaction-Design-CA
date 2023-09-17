@@ -124,8 +124,7 @@ function opencart() {
         productPrice.setAttribute("id", "cartprice");
         productPrice.innerHTML = "Cost $" + cart[i].price;
         holderDiv.appendChild(productPrice);
-        let price = cart[i].price;
-        totalPrice = (price+=totalPrice);
+        totalPrice += Number(cart[i].price);
 
         container.appendChild(holderDiv);
         cartContent.appendChild(container);
